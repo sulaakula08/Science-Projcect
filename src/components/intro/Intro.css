@@ -1,0 +1,17 @@
+.intro {
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+}
+
+.intro-text h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, rgb(122, 180, 34), rgb(153, 255, 0));
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 20px;
+}
+
+.intro-picture img {
+    cursor: pointer;
+}

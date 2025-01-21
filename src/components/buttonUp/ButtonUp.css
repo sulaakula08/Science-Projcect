@@ -1,0 +1,28 @@
+.button-up {
+    position: fixed;
+    right: 35px;
+    top: 65px;
+}
+
+.button-up button {
+    border-radius: 14px;
+    padding: 4px 5px 0 5px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: rgb(131, 194, 37);
+    transition: all 300ms ease;
+}
+
+.button-up > img {
+    width: 20px;
+    transition: all 200ms ease;
+}
+
+.button-up:hover img {
+    transform: rotate(180deg);
+}
+
+.button-up button:hover {
+    background-color: var(--link-hover);
+}

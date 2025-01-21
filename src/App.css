@@ -7,4 +7,12 @@ a {
     --link-hover: rgb(106, 156, 31);
     background-color: rgb(228, 228, 228);
     --text-color: rgb(29, 28, 28);
+    --link: rgb(29, 28, 28);
+}
+
+[data-theme="dark"] {
+    --link-hover: rgb(106, 156, 31);
+    background-color: rgb(228, 228, 228);
+    --text-color: rgb(29, 28, 28);
+    --link: rgb(218, 218, 218);
 }

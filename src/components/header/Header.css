@@ -33,6 +33,7 @@
     transition: all 200ms ease;
     font-weight: 600;
     font-size: 18px;
+    color: var(--link);
 }
 
 .navbar li:hover {
@@ -45,12 +46,16 @@ img.arrow {
     transition: transform 150ms ease;
 }
 
-img {
+.navbar img {
     width: 30px;
 }
 
+img.arrow {
+    width: 13px;
+}
+
 .dark-btn {
-    background-color: white;
+    background-color: var(--back-color);
     position: relative;
     top: -5px;
     right: -160px;
@@ -79,8 +84,7 @@ button.dark-btn:hover {
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #fff;
-    border: 1px solid #cac6c6dd;
+    background-color: var(--back-color);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -97,7 +101,7 @@ button.dark-btn:hover {
 
 /* Hover эффект для пунктов */
 .dropdown-menu li:hover {
-    background-color: #e0e0e0;
+    background-color: var(--element-hover);
 }
 
 /* Показ меню при наведении */

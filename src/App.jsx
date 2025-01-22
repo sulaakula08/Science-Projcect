@@ -18,7 +18,7 @@ function App() {
     const [isDark, setIsDark] = useState(false);
 
     return (
-        <div className="app">
+        <div className="App" data-theme={isDark ? "light" : "dark"}>
             <Header isDark={isDark} handleTheme={() => setIsDark(!isDark)} />
             <ButtonUp handleClick={scrollToTop} />
             <Routes>

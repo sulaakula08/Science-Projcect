@@ -1,18 +1,28 @@
+.App {
+    background: var(--back-color);
+}
+
+p {
+    color: var(--text-color);
+}
+
 a {
     text-decoration: none;
-    color: black;
+    color: var(--link-);
 }
 
 :root {
     --link-hover: rgb(106, 156, 31);
-    background-color: rgb(228, 228, 228);
+    --back-color: rgb(255, 255, 255);
     --text-color: rgb(29, 28, 28);
     --link: rgb(29, 28, 28);
+    --element-hover: rgb(204, 204, 204);
 }
 
 [data-theme="dark"] {
     --link-hover: rgb(106, 156, 31);
-    background-color: rgb(228, 228, 228);
-    --text-color: rgb(29, 28, 28);
+    --back-color: rgb(39, 39, 39);
+    --text-color: rgb(189, 189, 189);
     --link: rgb(218, 218, 218);
+    --element-hover: rgb(61, 61, 61);
 }

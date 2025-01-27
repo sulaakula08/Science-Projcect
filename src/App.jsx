@@ -6,6 +6,7 @@ import PlottingGraph from "./pages/plottingGraph/PlottingGraph";
 import Home from "./pages/home/Home";
 import ButtonUp from "./components/buttonUp/ButtonUp";
 import { useState } from "react";
+import Options from "./pages/options/Options";
 
 function App() {
     const scrollToTop = () => {
@@ -25,6 +26,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/excel" element={<Excel />} />
                 <Route path="/graph" element={<PlottingGraph />} />
+                <Route path="options" element={<Options />} />
             </Routes>
         </div>
     );

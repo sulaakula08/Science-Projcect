@@ -1,0 +1,5 @@
+.options {
+    background-color: var(--back-color);
+    height: 800px;
+    display: grid;
+}

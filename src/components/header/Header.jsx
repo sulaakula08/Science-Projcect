@@ -8,6 +8,12 @@ import sun from "../../assets/sun-svgrepo-com (4).svg";
 import moon from "../../assets/moon-svgrepo-com (1).svg";
 
 const Header = ({ handleTheme, isDark }) => {
+    const [isClick, setIsClick] = useState(false);
+
+    const handleClick = () => {
+        setIsClick((prev) => !prev);
+    };
+
     return (
         <div className="header">
             <div className="logo">
@@ -18,21 +24,23 @@ const Header = ({ handleTheme, isDark }) => {
                     <Link to="/">
                         <li>Home</li>
                     </Link>
-                    <li className="dropdown">
+                    <li className="dropdown" onClick={handleClick}>
                         Criterion C{" "}
                         <img
                             src={isDark ? dark_arrow : light_arrow}
                             alt=""
                             className="arrow"
                         />
-                        <ul className="dropdown-menu">
+                        <ul
+                            className={`dropdown-menu ${isClick ? "show" : ""}`}
+                        >
                             <Link to="excel">
                                 <li>Excel Plan</li>
                             </Link>
                             <Link to="graph">
                                 <li>Plotting the Graph</li>
                             </Link>
-                            <Link>
+                            <Link to="/options">
                                 <li>Tutorial</li>
                             </Link>
                         </ul>

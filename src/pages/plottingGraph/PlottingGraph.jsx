@@ -28,6 +28,7 @@ import pic24 from "../../assets/plotting-graph/Снимок экрана 2025-01
 const PlottingGraph = () => {
     return (
         <div className="plotting-graph">
+            <h1>Poltting the Graph</h1>
             <p>Open the GVA</p>
             <img src={pic1} alt="" />
             <p>

@@ -2,16 +2,27 @@
     min-height: 600px;
     display: flex;
     flex-direction: row;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-text {
 }
 
 .intro-text h1 {
-    font-size: 3rem;
-    background: linear-gradient(to right, rgb(122, 180, 34), rgb(153, 255, 0));
-    background-clip: text;
-    color: transparent;
+    font-size: 40px;
+
+    color: greenyellow;
     margin-bottom: 20px;
+    z-index: 1;
 }
 
 .intro-picture img {
     cursor: pointer;
+}
+
+button.tutorial-btn {
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
 }

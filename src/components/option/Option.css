@@ -1,0 +1,21 @@
+.option {
+    max-width: 400px;
+    border: 1px dashed grey;
+    background-color: var(--el-color);
+}
+
+.option h1 {
+    color: var(--title-color);
+}
+
+.option p {
+    color: var(--text-color);
+}
+
+.option button {
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    background-color: var(--link-hover);
+    border-radius: 9px;
+}

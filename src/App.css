@@ -1,5 +1,5 @@
 .App {
-    background: var(--back-color);
+    background: var(--back-color)
 }
 
 p {
@@ -11,26 +11,21 @@ a {
     color: var(--link-);
 }
 
-h1 {
-    color: var(--title-color);
-}
-
 :root {
     --link-hover: rgb(106, 156, 31);
     --back-color: rgb(255, 255, 255);
     --text-color: rgb(29, 28, 28);
     --link: rgb(29, 28, 28);
     --element-hover: rgb(204, 204, 204);
-    --title-color: rgb(0, 0, 0);
-    --el-color: rgb(235, 234, 234);
+    --link: rgb(129, 189, 39);
+    --title-color: rgb(32, 32, 32);
 }
 
 [data-theme="dark"] {
     --link-hover: rgb(106, 156, 31);
-    --back-color: rgb(17, 17, 17);
+    --back-color: rgb(39, 39, 39);
     --text-color: rgb(189, 189, 189);
     --link: rgb(218, 218, 218);
     --element-hover: rgb(61, 61, 61);
-    --title-color: rgb(241, 241, 241);
-    --el-color: rgb(43, 43, 43);
+    --title-color: rgb(227, 227, 227);
 }

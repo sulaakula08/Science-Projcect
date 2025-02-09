@@ -3,10 +3,12 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    z-index: 1;
+    z-index: 0;
+    height: 900px;
 }
 
 .intro-text {
+    z-index: 0;
 }
 
 .intro-text h1 {
@@ -14,7 +16,7 @@
 
     color: greenyellow;
     margin-bottom: 20px;
-    z-index: 1;
+    z-index: 0;
 }
 
 .intro-picture img {
@@ -25,4 +27,23 @@ button.tutorial-btn {
     cursor: pointer;
     margin-top: 10px;
     display: block;
+}
+
+img.intro-logo {
+    margin-right: 40px;
+}
+
+button.tutorial-btn {
+    border: none;
+    padding: 10px 16px;
+    background-color: greenyellow;
+    border-radius: 10px;
+    font-size: 18px;
+color: var(--back-color);
+    font-weight: 700;
+}
+
+
+button.turorial-btn:hover {
+    background-color: rgb(54, 58, 48);
 }

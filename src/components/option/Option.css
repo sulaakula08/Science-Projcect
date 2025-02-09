@@ -1,11 +1,18 @@
 .option {
-    max-width: 400px;
+    max-width: 600px;
     border: 1px dashed grey;
     background-color: var(--el-color);
+    min-height: 200px;
+    position: relative;
+    left: 70%;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
 }
 
 .option h1 {
     color: var(--title-color);
+    text-align: center;
 }
 
 .option p {
@@ -14,8 +21,19 @@
 
 .option button {
     border: none;
-    padding: 10px 16px;
+    padding: 10px 28px;
     cursor: pointer;
-    background-color: var(--link-hover);
+    background-color: greenyellow;
     border-radius: 9px;
+    position: absolute;
+    left: 40%;
+    font-size: 19px;
+    font-weight: 700;
+    transition: all 300ms ease;
+    margin-top: 20px;
+}
+
+.option button:hover {
+    transform: scale(1.02);
+    background-color: rgba(110, 155, 41, 0.977);
 }

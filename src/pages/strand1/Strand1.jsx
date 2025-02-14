@@ -42,7 +42,7 @@ const Strand1 = () => {
                 <ul>
                     <li>• Non-zero digits are significant.</li>
                     <li>
-                        •Trailing zeroes in a whole number are generally not
+                        • Trailing zeroes in a whole number are generally not
                         significant (these zeroes are used to keep the other
                         figures in their correct value places). ‒ 75000 m – the
                         7 and 5 are significant. There are 2 significant

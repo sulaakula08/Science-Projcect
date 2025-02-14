@@ -1,5 +1,8 @@
 .App {
-    background: var(--back-color)
+    background: var(--back-color);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: auto;
 }
 
 p {
@@ -15,17 +18,20 @@ a {
     --link-hover: rgb(106, 156, 31);
     --back-color: rgb(255, 255, 255);
     --text-color: rgb(29, 28, 28);
-    --link: rgb(29, 28, 28);
     --element-hover: rgb(204, 204, 204);
-    --link: rgb(129, 189, 39);
+    --link: rgb(112, 184, 4);
     --title-color: rgb(32, 32, 32);
+    --color: green;
+    --back-hover: rgb(214, 212, 212);
 }
 
 [data-theme="dark"] {
     --link-hover: rgb(106, 156, 31);
-    --back-color: rgb(39, 39, 39);
+    --back-color: rgb(10, 10, 10);
     --text-color: rgb(189, 189, 189);
     --link: rgb(218, 218, 218);
     --element-hover: rgb(61, 61, 61);
     --title-color: rgb(227, 227, 227);
+    color: green;
+    --back-hover: rgb(20, 20, 20);
 }

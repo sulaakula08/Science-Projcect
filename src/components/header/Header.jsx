@@ -15,47 +15,47 @@ const Header = ({ handleTheme, isDark }) => {
     };
 
     return (
-      <div className="header">
-        <div className="logo">
-          <img src={logo} alt="" />
+        <div className="header">
+            <div className="logo">
+                <img src={logo} alt="" />
+            </div>
+            <div className="navbar">
+                <ul>
+                    <Link to="/">
+                        <li>Home</li>
+                    </Link>
+                    <li className="dropdown" onClick={handleClick}>
+                        Data Collection
+                        <img
+                            src={isDark ? dark_arrow : light_arrow}
+                            alt=""
+                            className="arrow"
+                        />
+                        <ul
+                            className={`dropdown-menu ${isClick ? "show" : ""}`}
+                        >
+                            <Link to="excel">
+                                <li>Excel Plan</li>
+                            </Link>
+                            <Link to="graph">
+                                <li>Plotting the Graph</li>
+                            </Link>
+                            <Link to="/options">
+                                <li>Tutorial</li>
+                            </Link>
+                        </ul>
+                    </li>
+                    <li>Data Analysis</li>
+                    <li>Contacts</li>
+                    <li>Comments</li>
+
+                    <label class="switch">
+                        <input type="checkbox" onClick={handleTheme} />
+                        <span class="slider"></span>
+                    </label>
+                </ul>
+            </div>
         </div>
-        <div className="navbar">
-          <ul>
-            <Link to="/">
-              <li>Home</li>
-            </Link>
-            <li className="dropdown" onClick={handleClick}>
-              Data Collection
-              <img
-                src={isDark ? dark_arrow : light_arrow}
-                alt=""
-                className="arrow"
-              />
-              <ul className={`dropdown-menu ${isClick ? "show" : ""}`}>
-                <Link to="excel">
-                  <li>Excel Plan</li>
-                </Link>
-                <Link to="graph">
-                  <li>Plotting the Graph</li>
-                </Link>
-                <Link to="/options">
-                  <li>Tutorial</li>
-                </Link>
-              </ul>
-            </li>
-            <li>Data Analysis</li>
-            <li>Contacts</li>
-            <li>Comments</li>
-            <button onClick={handleTheme} className="dark-btn">
-              <img
-                src={isDark ? moon : sun}
-                className="dark-theme-img"
-                alt=""
-              />
-            </button>
-          </ul>
-        </div>
-      </div>
     );
 };
 

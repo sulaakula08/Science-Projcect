@@ -1,0 +1,22 @@
+.data-analysis-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: var(--background);
+    color: var(--text);
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .data-analysis-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .data-analysis-container p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+  }
+  

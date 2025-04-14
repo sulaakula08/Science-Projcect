@@ -8,7 +8,12 @@ import ButtonUp from "./components/buttonUp/ButtonUp";
 import { useState } from "react";
 import Options from "./pages/options/Options";
 import Strand1 from "./pages/strand1/Strand1";
-
+import Strand2 from "./pages/strand2/Strand2";
+import Strand3 from "./pages/strand3/Strand3";
+import Strand4 from "./pages/strand4/Strand4";
+import Strand5 from "./pages/strand5/Strand5";
+import Comments from "./pages/comments/Comments";
+import DataAnalysis from "./pages/dataAnalysis/DataAnalysis";
 function App() {
     const scrollToTop = () => {
         window.scrollTo({
@@ -20,7 +25,7 @@ function App() {
     const [isDark, setIsDark] = useState(false);
 
     return (
-        <div className="App" data-theme={isDark ? "light" : "dark"}>
+        <div className="App" data-theme={isDark ? "dark" : "light"}>
             <Header isDark={isDark} handleTheme={() => setIsDark(!isDark)} />
             <ButtonUp handleClick={scrollToTop} />
             <Routes>
@@ -29,6 +34,12 @@ function App() {
                 <Route path="/graph" element={<PlottingGraph />} />
                 <Route path="/options" element={<Options />} />
                 <Route path="/strand1" element={<Strand1 />} />
+                <Route path="/strand2" element={<Strand2 />} />
+                <Route path="/strand3" element={<Strand3 />} />
+                <Route path="/strand4" element={<Strand4 />} />
+                <Route path="/strand5" element={<Strand5 />} />
+                <Route path="/comments" element={<Comments/>} />
+                <Route path="analysis" element={<DataAnalysis/>}/>
             </Routes>
         </div>
     );

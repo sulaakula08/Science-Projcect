@@ -1,39 +1,66 @@
 .option {
-    max-width: 600px;
-    border: 1px dashed grey;
-    background-color: var(--el-color);
-    min-height: 200px;
-    position: relative;
-    left: 70%;
-    border-radius: 20px;
-    margin: 20px;
-    padding: 10px;
-}
-
-.option h1 {
-    color: var(--title-color);
-    text-align: center;
-}
-
-.option p {
-    color: var(--text-color);
-}
-
-.option button {
-    border: none;
-    padding: 10px 28px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
     cursor: pointer;
-    background-color: greenyellow;
-    border-radius: 9px;
-    position: absolute;
-    left: 40%;
-    font-size: 19px;
-    font-weight: 700;
-    transition: all 300ms ease;
-    margin-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.option button:hover {
-    transform: scale(1.02);
-    background-color: rgba(110, 155, 41, 0.977);
+.option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.option:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.option:hover::before {
+    transform: scaleX(1);
+}
+
+.option-title {
+    color: var(--text);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.option-description {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .option {
+        padding: 1.5rem;
+    }
+
+    .option-title {
+        font-size: 1.25rem;
+    }
 }

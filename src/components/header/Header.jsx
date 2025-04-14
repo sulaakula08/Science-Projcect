@@ -1,61 +1,125 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
-import logo from "../../assets/logo_main.png";
 import dark_arrow from "../../assets/arrow-down-sign-to-navigate.png";
 import light_arrow from "../../assets/arrow-down-sign-to-navigate (3).png";
-import { Link } from "react-router-dom";
-import sun from "../../assets/sun-svgrepo-com (4).svg";
-import moon from "../../assets/moon-svgrepo-com (1).svg";
 
 const Header = ({ handleTheme, isDark }) => {
     const [isClick, setIsClick] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const location = useLocation();
 
-    const handleClick = () => {
-        setIsClick((prev) => !prev);
-    };
+    // Scroll event optimization
+    const handleScroll = useCallback(() => {
+        setIsScrolled(window.scrollY > 50);
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [handleScroll]);
+
+    // Close dropdown when clicking outside or changing routes
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (!event.target.closest(".dropdown")) {
+                setIsClick(false);
+            }
+        };
+        document.addEventListener("click", handleOutsideClick);
+        return () => document.removeEventListener("click", handleOutsideClick);
+    }, []);
+
+    // Close dropdown when route changes
+    useEffect(() => {
+        setIsClick(false);
+    }, [location]);
 
     return (
-        <div className="header">
-            <div className="logo">
-                <img src={logo} alt="" />
-            </div>
-            <div className="navbar">
-                <ul>
-                    <Link to="/">
-                        <li>Home</li>
-                    </Link>
-                    <li className="dropdown" onClick={handleClick}>
-                        Data Collection
-                        <img
-                            src={isDark ? dark_arrow : light_arrow}
-                            alt=""
-                            className="arrow"
-                        />
-                        <ul
-                            className={`dropdown-menu ${isClick ? "show" : ""}`}
+        <header className={`header ${isScrolled ? "scrolled" : ""}`}>
+            <div className="container">
+                <nav className="navbar">
+                    <ul className="nav-list">
+                        <li>
+                            <Link to="/" className="nav-link">
+                                Home
+                            </Link>
+                        </li>
+                        <li
+                            className={`dropdown ${isClick ? "active" : ""}`}
+                            onClick={() => setIsClick(!isClick)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" || e.key === " ") {
+                                    e.preventDefault();
+                                    setIsClick(!isClick);
+                                }
+                            }}
+                            role="button"
+                            tabIndex={0}
+                            aria-expanded={isClick}
+                            aria-haspopup="true"
                         >
-                            <Link to="excel">
-                                <li>Excel Plan</li>
+                            <span className="dropdown-toggle">
+                                Data Collection
+                                <img
+                                    src={isDark ? dark_arrow : light_arrow}
+                                    alt=""
+                                    className={`arrow ${isClick ? "rotated" : ""}`}
+                                    aria-hidden="true"
+                                />
+                            </span>
+                            <ul
+                                className={`dropdown-menu ${isClick ? "show" : ""}`}
+                                role="menu"
+                            >
+                                <li>
+                                    <Link to="/excel" className="nav-link">
+                                        Excel Plan
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/graph" className="nav-link">
+                                        Plotting the Graph
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/options" className="nav-link">
+                                        Tutorial
+                                    </Link>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <Link to="/analysis" className="nav-link">
+                                Data Analysis
                             </Link>
-                            <Link to="graph">
-                                <li>Plotting the Graph</li>
+                        </li>
+                        <li>
+                            <Link to="/contacts" className="nav-link">
+                                Contacts
                             </Link>
-                            <Link to="/options">
-                                <li>Tutorial</li>
+                        </li>
+                        <li>
+                            <Link to="/comments" className="nav-link">
+                                Comments
                             </Link>
-                        </ul>
-                    </li>
-                    <li>Data Analysis</li>
-                    <li>Contacts</li>
-                    <li>Comments</li>
-
-                    <label class="switch">
-                        <input type="checkbox" onClick={handleTheme} />
-                        <span class="slider"></span>
-                    </label>
-                </ul>
+                        </li>
+                        <li>
+                            <label className="switch" htmlFor="themeToggle">
+                                <input
+                                    id="themeToggle"
+                                    type="checkbox"
+                                    onChange={handleTheme}
+                                    checked={isDark}
+                                    aria-label="Toggle dark mode"
+                                />
+                                <span className="slider"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-        </div>
+        </header>
     );
 };
 

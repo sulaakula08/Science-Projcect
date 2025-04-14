@@ -1,37 +1,201 @@
-.App {
-    background: var(--back-color);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: auto;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-p {
-    color: var(--text-color);
-}
-
-a {
-    text-decoration: none;
-    color: var(--link-);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
 :root {
-    --link-hover: rgb(106, 156, 31);
-    --back-color: rgb(255, 255, 255);
-    --text-color: rgb(29, 28, 28);
-    --element-hover: rgb(204, 204, 204);
-    --link: rgb(112, 184, 4);
-    --title-color: rgb(32, 32, 32);
-    --color: green;
-    --back-hover: rgb(214, 212, 212);
+    /* Light theme */
+    --primary: #4a90e2;
+    --primary-hover: #357abd;
+    --text: #2c3e50;
+    --text-secondary: #7f8c8d;
+    --background: #f5f6fa;
+    --surface: #ffffff;
+    --border: #e1e1e1;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 [data-theme="dark"] {
-    --link-hover: rgb(106, 156, 31);
-    --back-color: rgb(10, 10, 10);
-    --text-color: rgb(189, 189, 189);
-    --link: rgb(218, 218, 218);
-    --element-hover: rgb(61, 61, 61);
-    --title-color: rgb(227, 227, 227);
-    color: green;
-    --back-hover: rgb(20, 20, 20);
+    --primary: #64b5f6;
+    --primary-hover: #90caf9;
+    --text: #ffffff;
+    --text-secondary: #e2e8f0;
+    --background: #121212;
+    --surface: #1e1e1e;
+    --border: #2d2d2d;
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+html,
+body {
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.App {
+    min-height: 100vh;
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Page Styles */
+.page {
+    min-height: calc(100vh - 80px);
+    padding-top: 100px;
+    background-color: var(--background);
+    transition: background-color 0.3s ease;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-1 {
+    margin-top: 0.5rem;
+}
+.mt-2 {
+    margin-top: 1rem;
+}
+.mt-3 {
+    margin-top: 1.5rem;
+}
+.mt-4 {
+    margin-top: 2rem;
+}
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+.mb-2 {
+    margin-bottom: 1rem;
+}
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+.mb-4 {
+    margin-bottom: 2rem;
+}
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background-color: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--background);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Card Styles */
+.card {
+    background-color: var(--surface);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background-color: var(--surface);
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .page {
+        padding-top: 100px;
+    }
 }

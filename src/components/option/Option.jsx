@@ -1,18 +1,11 @@
 import React from "react";
 import "./Option.css";
-import { Link } from "react-router";
 
-const Option = ({ title, text }) => {
+const Option = ({ title, description }) => {
     return (
-        <div class="card">
-            {" "}
-            <div className="option">
-                <h1>{title}</h1>
-                <p>{text}</p>
-                <Link to="">
-                    <button>Open</button>
-                </Link>
-            </div>
+        <div className="option">
+            <h2 className="option-title">{title}</h2>
+            {description && <p className="option-description">{description}</p>}
         </div>
     );
 };

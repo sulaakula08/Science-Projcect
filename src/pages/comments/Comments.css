@@ -1,0 +1,97 @@
+/* Container for the entire comment section */
+.comments-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Title */
+.comments-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text);
+}
+
+/* Comment form */
+.comment-form {
+    width: 100%;
+    background-color: var(--surface);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+}
+
+/* Textarea inside the form */
+.comment-form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    resize: vertical;
+    min-height: 120px;
+    background-color: var(--surface);
+    color: var(--text);
+    margin-bottom: 1rem;
+}
+
+/* Submit button */
+.comment-form .btn-submit {
+    width: 100%;
+    padding: 0.85rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+
+}
+
+ button {
+    cursor: pointer;
+}
+
+
+.btn-submit:hover {
+    background-color: var(--primary-hover);
+    box-shadow: var(--shadow-hover);
+    transform: scale(0.99);
+
+  }
+
+/* Comments list container */
+.comments-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Each comment card */
+.comment-card {
+    background-color: var(--surface);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+/* Author name */
+.comment-author {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+}
+
+/* Comment text */
+.comment-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}

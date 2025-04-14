@@ -1,8 +1,5 @@
 import React from "react";
 import "./Intro.css";
-import lab from "../../assets/doctor-working-in-laboratory-doing-research-with-microscope-2d-cartoon-animation-free-video.jpg";
-import { Link } from "react-router-dom";
-import logo from "../../assets/4816904.webp";
 
 const Intro = () => {
     return (
@@ -19,10 +16,10 @@ const Intro = () => {
                         more! Watch and get an 8 out of 8!
                     </p>
 
-                    <button class="button">
+                    <button className="button">
                         <svg
                             viewBox="0 0 16 16"
-                            class="bi bi-lightning-charge-fill"
+                            className="bi bi-lightning-charge-fill"
                             fill="currentColor"
                             height="16"
                             width="16"
@@ -33,9 +30,8 @@ const Intro = () => {
                         Tutorial
                     </button>
                 </div>
-                <div className="intro-picture">
-                    <img className="intro-logo" src={logo} alt="" />
-                </div>
+
+                <div className="intro-picture"></div>
             </div>
         </>
     );

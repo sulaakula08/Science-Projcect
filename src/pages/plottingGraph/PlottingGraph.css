@@ -1,0 +1,66 @@
+.plotting-graph {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Arial", sans-serif;
+    background-color: var(--back-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.plotting-graph h1 {
+    text-align: center;
+    font-size: 28px;
+    color: var(--title-color);
+    margin-bottom: 20px;
+}
+
+.plotting-graph p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+.plotting-graph img {
+    cursor: pointer;
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.plotting-graph img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.plotting-graph a {
+    color: var(--link);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.plotting-graph a:hover {
+    color: var(--link-hover);
+}
+
+@media (max-width: 600px) {
+    .plotting-graph {
+        padding: 15px;
+    }
+
+    .plotting-graph h1 {
+        font-size: 24px;
+    }
+
+    .plotting-graph p {
+        font-size: 14px;
+    }
+}

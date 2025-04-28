@@ -1,5 +1,5 @@
 import React from "react";
-import "./Strand1.css";
+import "../../styles/strands.css";
 
 const Strand1 = () => {
     return (

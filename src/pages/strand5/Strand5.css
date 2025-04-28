@@ -1,0 +1,71 @@
+.strand5, .strand4, .strand3, .strand2, .strand1 {
+    width: 900px;
+    margin: 0 auto;
+    background-color: var(--surface);
+    padding: 20px;
+}
+
+.strand5, .strand4, .strand3, .strand2, .strand1 h1, h2, h3 {
+    color: var(--text);
+}
+
+.strand5, .strand4, .strand3, .strand2, .strand1 p, li, span {
+    color: var(--text-secondary);
+}
+
+.strand5, .strand4, .strand3, .strand2 img {
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.strand5, .strand4, .strand3, .strand2 img:hover {
+    transform: scale(1.05);
+}
+
+li:hover {
+    color: var(--primary);
+}
+
+li {
+    transition: all 300ms ease;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--surface);
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  
+  th {
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  td i {
+    font-style: italic;
+    color: var(--text-secondary);
+  }
+  
+  td br {
+    margin-top: 0.5rem;
+    display: block;
+  }

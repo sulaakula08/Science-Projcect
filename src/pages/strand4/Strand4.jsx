@@ -1,5 +1,5 @@
 import React from "react";
-import "./Strand4.css";
+import "../../styles/strands.css";
 
 import pic1 from "../../assets/strand4/Снимок экрана 2025-03-02 170200.png";
 import pic2 from "../../assets/strand4/Снимок экрана 2025-03-02 170222.png";

@@ -20,7 +20,7 @@
 .plotting-graph p {
     font-size: 16px;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--text);
     margin: 10px 0;
 }
 

@@ -23,7 +23,7 @@
 [data-theme="dark"] {
     --primary: #64b5f6;
     --primary-hover: #90caf9;
-    --text: #ffffff;
+    --text: #cccccc;
     --text-secondary: #e2e8f0;
     --background: #121212;
     --surface: #1e1e1e;
@@ -45,6 +45,7 @@ body {
     background-color: var(--background);
     transition: background-color 0.3s ease;
 }
+
 
 .container {
     max-width: 1200px;

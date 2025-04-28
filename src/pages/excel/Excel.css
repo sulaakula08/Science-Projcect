@@ -16,7 +16,7 @@
 
 .excel-content p {
     font-size: 16px;
-    color: var(--text-color);
+    color: var(--text);
     line-height: 1.5;
     margin-bottom: 15px 0px;
 }

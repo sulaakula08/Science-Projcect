@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import "./styles/animations.css";
 import Header from "./components/header/Header";
 import Excel from "./pages/excel/Excel";
 import PlottingGraph from "./pages/plottingGraph/PlottingGraph";
@@ -14,6 +15,8 @@ import Strand4 from "./pages/strand4/Strand4";
 import Strand5 from "./pages/strand5/Strand5";
 import Comments from "./pages/comments/Comments";
 import DataAnalysis from "./pages/dataAnalysis/DataAnalysis";
+import Contacts from "./pages/contact/Contacts";
+
 function App() {
     const scrollToTop = () => {
         window.scrollTo({
@@ -39,7 +42,8 @@ function App() {
                 <Route path="/strand4" element={<Strand4 />} />
                 <Route path="/strand5" element={<Strand5 />} />
                 <Route path="/comments" element={<Comments/>} />
-                <Route path="analysis" element={<DataAnalysis/>}/>
+                <Route path="/analysis" element={<DataAnalysis/>}/>
+                <Route path="/contacts" element={<Contacts/>}/>
             </Routes>
         </div>
     );

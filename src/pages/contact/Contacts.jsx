@@ -34,22 +34,30 @@ const Contacts = () => {
     <div className="contacts-container page-enter">
       <div className="contacts-header animate-fade-in">
         <h1>Contact Us</h1>
-        <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+        <p>
+          Have questions? We'd love to hear from you. Send us a message and
+          we'll respond as soon as possible.
+        </p>
       </div>
 
       <div className="contacts-content">
         <div className="contact-info">
           <div className="info-card animate-scale-in delay-1">
             <h3>Email</h3>
-            <p>info@sciencebc.com</p>
+            <p>kurbangaliyeva.alima@nisa.edu.kz</p>
           </div>
           <div className="info-card animate-scale-in delay-2">
             <h3>Phone</h3>
-            <p>+1 (555) 123-4567</p>
+            <p>
+              +7 707 199 4089 <br />{" "}
+            </p>
           </div>
           <div className="info-card animate-scale-in delay-3">
             <h3>Address</h3>
-            <p>123 Science Street<br />Vancouver, BC V6B 1A1</p>
+            <p>
+              Улица Хусейн бен Талал, 19 <br />
+              Нура район, Астана, Z05H8H1
+            </p>
           </div>
         </div>
 
@@ -102,7 +110,9 @@ const Contacts = () => {
                 className="theme-input"
               />
             </div>
-            <button type="submit" className="btn-submit hover-lift">Send Message</button>
+            <button type="submit" className="btn-submit hover-lift">
+              Send Message
+            </button>
           </form>
         </div>
       </div>

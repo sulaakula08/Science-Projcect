@@ -3,7 +3,7 @@ import "../../styles/strands.css";
 
 const Strand1 = () => {
     return (
-        <div className="strand1">
+        <div className="strand1 strand">
             <h1>Strand 1:</h1>
             <p>
                 1.1.1 Scientific notation and orders of magnitude A neat way of

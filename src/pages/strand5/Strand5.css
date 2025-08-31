@@ -1,71 +1,223 @@
-.strand5, .strand4, .strand3, .strand2, .strand1 {
-    width: 900px;
+/* Strand pages container - fixed header offset */
+.strand {
+    max-width: 1000px;
     margin: 0 auto;
     background-color: var(--surface);
-    padding: 20px;
-}
-
-.strand5, .strand4, .strand3, .strand2, .strand1 h1, h2, h3 {
+    padding: 2rem;
+    margin-top: 85px; /* Minimal offset to eliminate white space */
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    line-height: 1.6;
     color: var(--text);
 }
 
-.strand5, .strand4, .strand3, .strand2, .strand1 p, li, span {
-    color: var(--text-secondary);
+/* Typography hierarchy */
+.strand h1 {
+    color: var(--text);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 2rem 0 1.5rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--primary);
+    letter-spacing: -0.02em;
 }
 
-.strand5, .strand4, .strand3, .strand2 img {
-    cursor: pointer;
-    border-radius: 20px;
+.strand h2 {
+    color: var(--text);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
+    padding-left: 0.5rem;
+    border-left: 4px solid var(--primary);
 }
 
-.strand5, .strand4, .strand3, .strand2 img:hover {
-    transform: scale(1.05);
+.strand h3 {
+    color: var(--text);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.75rem 0;
 }
 
-li:hover {
+/* Paragraphs and text content */
+.strand p {
+    color: var(--text);
+    margin: 1rem 0;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.strand span {
+    color: var(--text);
+}
+
+/* Lists styling */
+.strand ul, .strand ol {
+    margin: 1rem 0 1rem 2rem;
+    padding-left: 0;
+}
+
+.strand li {
+    color: var(--text);
+    margin: 0.5rem 0;
+    padding: 0.25rem 0;
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+.strand li:hover {
     color: var(--primary);
+    transform: translateX(4px);
 }
 
-li {
-    transition: all 300ms ease;
+/* Images */
+.strand img {
+    cursor: pointer;
+    border-radius: 12px;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
 }
 
-table {
+.strand img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Highlighted content boxes */
+.strand .colored {
+    background: linear-gradient(135deg, var(--background), var(--surface));
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow);
+}
+
+.strand .colored strong {
+    color: var(--primary);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.strand .colored p {
+    margin: 0.75rem 0;
+}
+
+/* Tables */
+.strand table {
     width: 100%;
     border-collapse: collapse;
     background-color: var(--surface);
     box-shadow: var(--shadow);
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     margin: 2rem 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid var(--border);
+}
 
-  th, td {
+.strand th {
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 2px solid var(--border);
+}
+
+.strand td {
     padding: 1rem;
     text-align: left;
     border-bottom: 1px solid var(--border);
     color: var(--text);
-  }
-  
-  th {
-    background-color: var(--primary);
-    color: white;
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  tr:hover {
-    background-color: rgba(0, 0, 0, 0.03);
-  }
-  
-  td i {
+    vertical-align: top;
+}
+
+.strand tr:hover {
+    background-color: var(--background);
+    transition: background-color 0.2s ease;
+}
+
+.strand tr:last-child td {
+    border-bottom: none;
+}
+
+.strand td i {
     font-style: italic;
     color: var(--text-secondary);
-  }
-  
-  td br {
+}
+
+.strand td br {
     margin-top: 0.5rem;
     display: block;
-  }
+}
+
+/* Special elements */
+.strand sup, .strand sub {
+    color: var(--text);
+    font-size: 0.8em;
+}
+
+.strand #center {
+    text-align: center;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 1rem 0;
+    font-style: italic;
+}
+
+/* Dark theme specific improvements */
+[data-theme="dark"] .strand {
+    background-color: var(--surface);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .strand .colored {
+    background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.05));
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .strand tr:hover {
+    background-color: rgba(255,255,255,0.03);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .strand {
+        margin: 80px 1rem 2rem 1rem;
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+    
+    .strand h1 {
+        font-size: 2rem;
+        margin: 1.5rem 0 1rem 0;
+    }
+    
+    .strand h2 {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 0.75rem 0;
+    }
+    
+    .strand table {
+        font-size: 0.9rem;
+        margin: 1.5rem 0;
+    }
+    
+    .strand th, .strand td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .strand .colored {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+}

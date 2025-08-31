@@ -16,7 +16,7 @@ import pic12 from "../../assets/strand2/Снимок экрана 2025-03-02 154
 
 const Strand2 = () => {
     return (
-        <div className="strand2">
+        <div className="strand2 strand">
             <h1>2 – Accuracy, Errors, and Uncertainties</h1>
             <h2>2.1 Error</h2>
             <h3>2.1.1 Quantifying Error</h3>

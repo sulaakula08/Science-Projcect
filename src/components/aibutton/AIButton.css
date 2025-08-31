@@ -1,0 +1,35 @@
+.aibtn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+    z-index: 1000;
+}
+
+.aibtn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.aibtn img {
+    width: 28px;
+    height: 28px;
+}
+
+/* Auto-invert based on theme: dark icon on light theme, light icon on dark theme */
+[data-theme="light"] .aibtn img {
+    filter: invert(0) brightness(0) saturate(100%);
+}
+
+[data-theme="dark"] .aibtn img {
+    filter: invert(1) brightness(1.2);
+}

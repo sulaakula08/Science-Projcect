@@ -1,5 +1,5 @@
 import React from "react";
-import "./Strand5.css"
+import "./Strand5.css";
 
 import pic1 from "../../assets/strand5/Снимок экрана 2025-03-02 175701.png";
 import pic2 from "../../assets/strand5/Снимок экрана 2025-03-02 175719.png";
@@ -15,7 +15,7 @@ import pic11 from "../../assets/strand5/Снимок экрана 2025-03-02 175
 
 const Strand5 = () => {
     return (
-        <div className="strand5">
+        <div className="strand5 strand">
             <h1>5 – Using spreadsheets</h1>
             <p>
                 Spreadsheets are a powerful tool to process and analyse large

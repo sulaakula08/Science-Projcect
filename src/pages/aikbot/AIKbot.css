@@ -1,0 +1,224 @@
+.aikbot-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.aikbot-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.aikbot-header h1 {
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.aikbot-header .subtitle {
+    color: var(--text-secondary);
+}
+
+.aikbot-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: calc(80vh - 80px);
+}
+
+.chat-list {
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.chat-bubble {
+    max-width: 75%;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    line-height: 1.4;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.chat-bubble.user {
+    margin-left: auto;
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: #fff;
+}
+
+.chat-bubble.assistant {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border-color);
+}
+
+.chat-input {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.75rem;
+    padding: 0.5rem;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+}
+
+.chat-input .theme-input {
+    background: var(--input-bg);
+}
+
+/* Drag and drop highlighting */
+.chat-input.drag-active {
+    outline: 2px dashed var(--primary);
+    outline-offset: 6px;
+    border-radius: 12px;
+}
+
+/* File chips container */
+.file-chips {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0.25rem 0.25rem 0.5rem;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 9999px;
+    padding: 0.35rem 0.5rem 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.chip-name {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.chip-size {
+    color: var(--text-secondary);
+}
+
+.chip-remove {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 9999px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.chip-remove:hover {
+    color: var(--text);
+    background: var(--background);
+}
+
+.chat-input .btn-submit {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.chat-input .btn-submit:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.chat-input .btn-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.chat-input .btn-submit:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.35);
+}
+
+/* Generic circular icon button */
+.chat-input .icon-btn {
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease, transform 0.15s ease,
+        box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.chat-input .icon-btn:hover {
+    background: var(--background);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+.chat-input .icon-btn:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.chat-input .btn-file {
+    color: var(--primary);
+    border-color: var(--border);
+}
+
+.chat-input .icon-btn svg {
+    display: block;
+}
+
+/* Hide the file input but keep it accessible */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .aikbot-card {
+        height: 70vh;
+    }
+    .chat-bubble {
+        max-width: 85%;
+    }
+}
+
+/* Theme vars for card */
+[data-theme="light"] {
+    --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --card-bg: #2d2d2d;
+}

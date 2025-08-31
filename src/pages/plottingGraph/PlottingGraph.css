@@ -1,7 +1,7 @@
 .plotting-graph {
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
+
     font-family: "Arial", sans-serif;
     background-color: var(--back-color);
     color: var(--text-color);

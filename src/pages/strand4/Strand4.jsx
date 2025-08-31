@@ -9,7 +9,7 @@ import pic5 from "../../assets/strand4/Снимок экрана 2025-03-02 1703
 
 const Strand4 = () => {
     return (
-        <div className="strand4">
+        <div className="strand4 strand">
             <h1>4 – Analysing data</h1>
             <br />
             <h2>4.1 General principles</h2>

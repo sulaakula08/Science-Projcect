@@ -16,6 +16,8 @@ import Strand5 from "./pages/strand5/Strand5";
 import Comments from "./pages/comments/Comments";
 import DataAnalysis from "./pages/dataAnalysis/DataAnalysis";
 import Contacts from "./pages/contact/Contacts";
+import AIButton from "./components/aibutton/AIButton";
+import AIKbot from "./pages/aikbot/AIKbot";
 
 function App() {
     const scrollToTop = () => {
@@ -31,6 +33,7 @@ function App() {
         <div className="App" data-theme={isDark ? "dark" : "light"}>
             <Header isDark={isDark} handleTheme={() => setIsDark(!isDark)} />
             <ButtonUp handleClick={scrollToTop} />
+            <AIButton />
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/excel" element={<Excel />} />
@@ -41,9 +44,11 @@ function App() {
                 <Route path="/strand3" element={<Strand3 />} />
                 <Route path="/strand4" element={<Strand4 />} />
                 <Route path="/strand5" element={<Strand5 />} />
-                <Route path="/comments" element={<Comments/>} />
-                <Route path="/analysis" element={<DataAnalysis/>}/>
-                <Route path="/contacts" element={<Contacts/>}/>
+                <Route path="/comments" element={<Comments />} />
+                <Route path="/analysis" element={<DataAnalysis />} />
+                <Route path="/contacts" element={<Contacts />} />
+                <Route path="tutorial" element={<Options />} />
+                <Route path="/aikbot" element={<AIKbot />} />
             </Routes>
         </div>
     );

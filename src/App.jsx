@@ -15,43 +15,47 @@ import Strand4 from "./pages/strand4/Strand4";
 import Strand5 from "./pages/strand5/Strand5";
 import Comments from "./pages/comments/Comments";
 import DataAnalysis from "./pages/dataAnalysis/DataAnalysis";
-import Contacts from "./pages/contact/Contacts";
+
 import AIButton from "./components/aibutton/AIButton";
 import AIKbot from "./pages/aikbot/AIKbot";
+import Popup from "./components/popup/Popup";
+import Footer from "./components/footer/Footer";
 
 function App() {
-    const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
-    const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-    return (
-        <div className="App" data-theme={isDark ? "dark" : "light"}>
-            <Header isDark={isDark} handleTheme={() => setIsDark(!isDark)} />
-            <ButtonUp handleClick={scrollToTop} />
-            <AIButton />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/excel" element={<Excel />} />
-                <Route path="/graph" element={<PlottingGraph />} />
-                <Route path="/options" element={<Options />} />
-                <Route path="/strand1" element={<Strand1 />} />
-                <Route path="/strand2" element={<Strand2 />} />
-                <Route path="/strand3" element={<Strand3 />} />
-                <Route path="/strand4" element={<Strand4 />} />
-                <Route path="/strand5" element={<Strand5 />} />
-                <Route path="/comments" element={<Comments />} />
-                <Route path="/analysis" element={<DataAnalysis />} />
-                <Route path="/contacts" element={<Contacts />} />
-                <Route path="tutorial" element={<Options />} />
-                <Route path="/aikbot" element={<AIKbot />} />
-            </Routes>
-        </div>
-    );
+  return (
+    <div className="App" data-theme={isDark ? "dark" : "light"}>
+      <Header isDark={isDark} handleTheme={() => setIsDark(!isDark)} />
+      <ButtonUp handleClick={scrollToTop} />
+      <AIButton />
+      <Popup />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/excel" element={<Excel />} />
+        <Route path="/graph" element={<PlottingGraph />} />
+        <Route path="/options" element={<Options />} />
+        <Route path="/strand1" element={<Strand1 />} />
+        <Route path="/strand2" element={<Strand2 />} />
+        <Route path="/strand3" element={<Strand3 />} />
+        <Route path="/strand4" element={<Strand4 />} />
+        <Route path="/strand5" element={<Strand5 />} />
+        <Route path="/comments" element={<Comments />} />
+        <Route path="/analysis" element={<DataAnalysis />} />
+
+        <Route path="tutorial" element={<Options />} />
+        <Route path="/aikbot" element={<AIKbot />} />
+      </Routes>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

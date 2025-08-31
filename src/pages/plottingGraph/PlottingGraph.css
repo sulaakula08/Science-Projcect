@@ -1,19 +1,21 @@
 .plotting-graph {
     max-width: 800px;
     margin: 0 auto;
-
     font-family: "Arial", sans-serif;
-    background-color: var(--back-color);
-    color: var(--text-color);
+    background-color: var(--background);
+    color: var(--text);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, color 0.3s;
+    min-height: calc(100vh - 80px);
+    padding-top: 120px;
+    padding: 20px;
 }
 
 .plotting-graph h1 {
     text-align: center;
     font-size: 28px;
-    color: var(--title-color);
+    color: var(--text);
     margin-bottom: 20px;
 }
 
@@ -41,14 +43,14 @@
 }
 
 .plotting-graph a {
-    color: var(--link);
+    color: var(--primary);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .plotting-graph a:hover {
-    color: var(--link-hover);
+    color: var(--primary-hover);
 }
 
 @media (max-width: 600px) {

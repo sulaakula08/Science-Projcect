@@ -62,7 +62,7 @@ const Header = ({ handleTheme, isDark }) => {
                             <span className="dropdown-toggle">
                                 Data Collection
                                 <img
-                                    src={isDark ? dark_arrow : light_arrow}
+                                    src={isDark ? light_arrow : dark_arrow}
                                     alt=""
                                     className={`arrow ${isClick ? "rotated" : ""}`}
                                     aria-hidden="true"
@@ -94,11 +94,7 @@ const Header = ({ handleTheme, isDark }) => {
                                 Data Analysis
                             </Link>
                         </li>
-                        <li>
-                            <Link to="/contacts" className="nav-link">
-                                Contacts
-                            </Link>
-                        </li>
+
                         <li>
                             <Link to="/comments" className="nav-link">
                                 Comments

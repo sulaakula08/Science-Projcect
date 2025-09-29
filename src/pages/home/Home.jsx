@@ -63,36 +63,32 @@ const Home = () => {
 
             <section className="strands-section">
                 <h2 className="section-title animate-slide-in">
-                    Explore Science Strands
+                    Criterions Descriptors
                 </h2>
                 <div className="strands-grid">
-                    <div className="strand-card animate-fade-in delay-1 hover-lift">
-                        <h3 className="strand-title">Matter and Energy</h3>
-                        <p className="strand-description">
-                            Discover the fundamental principles of matter and
-                            energy in our universe.
-                        </p>
-                        <Link to="/strand1" className="strand-link hover-scale">
-                            Learn More
-                        </Link>
-                    </div>
                     <div className="strand-card animate-fade-in delay-2 hover-lift">
-                        <h3 className="strand-title">Force and Motion</h3>
+                        <h3 className="strand-title">Criterion B</h3>
                         <p className="strand-description">
                             Explore the laws of physics that govern movement and
                             forces.
                         </p>
-                        <Link to="/strand2" className="strand-link hover-scale">
+                        <Link
+                            to="/criterionB"
+                            className="strand-link hover-scale"
+                        >
                             Learn More
                         </Link>
                     </div>
                     <div className="strand-card animate-fade-in delay-3 hover-lift">
-                        <h3 className="strand-title">Earth and Space</h3>
+                        <h3 className="strand-title">Criterion C </h3>
                         <p className="strand-description">
                             Journey through our planet and beyond into the
                             cosmos.
                         </p>
-                        <Link to="/strand3" className="strand-link hover-scale">
+                        <Link
+                            to="/criterionC"
+                            className="strand-link hover-scale"
+                        >
                             Learn More
                         </Link>
                     </div>

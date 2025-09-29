@@ -1,0 +1,80 @@
+/* Container */
+.criterionc {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    line-height: 1.6;
+    color: var(--text);
+    margin-top: 100px;
+}
+
+/* Headings */
+.criterionc-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.criterionc-heading {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.3rem;
+}
+
+.criterionc-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Card / block */
+.criterionc-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.4rem;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+/* Grid for descriptors */
+.criterionc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* two per row */
+    gap: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .criterionc-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hover effect: subtle doc highlight */
+.criterionc-card:hover {
+    background-color: rgba(74, 144, 226, 0.05); /* soft blue tint */
+    border-color: var(--primary); /* highlight border */
+}
+
+/* Clarification text */
+.criterionc-clarification {
+    font-style: italic;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+/* Lists */
+.criterionc ul {
+    margin: 0.4rem 0 0.8rem 1.2rem;
+    font-size: 0.95rem;
+    color: var(--text); /* force main text */
+}
+
+.criterionc ul li {
+    margin-bottom: 0.3rem;
+}

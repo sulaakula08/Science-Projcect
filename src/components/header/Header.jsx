@@ -64,12 +64,16 @@ const Header = ({ handleTheme, isDark }) => {
                                 <img
                                     src={isDark ? light_arrow : dark_arrow}
                                     alt=""
-                                    className={`arrow ${isClick ? "rotated" : ""}`}
+                                    className={`arrow ${
+                                        isClick ? "rotated" : ""
+                                    }`}
                                     aria-hidden="true"
                                 />
                             </span>
                             <ul
-                                className={`dropdown-menu ${isClick ? "show" : ""}`}
+                                className={`dropdown-menu ${
+                                    isClick ? "show" : ""
+                                }`}
                                 role="menu"
                             >
                                 <li>
@@ -99,6 +103,15 @@ const Header = ({ handleTheme, isDark }) => {
                             <Link to="/comments" className="nav-link">
                                 Comments
                             </Link>
+                        </li>
+                        <li>
+                            <a
+                                href="https://docs.google.com/document/d/1OCbH-uQo7zHS-QU1m6vS0yoaMCVpV2zWJ4Yxbeia5yU/edit?usp=sharing"
+                                target="_blank"
+                            >
+                                {" "}
+                                Guide
+                            </a>
                         </li>
                         <li>
                             <label className="switch" htmlFor="themeToggle">
